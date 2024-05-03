@@ -2,6 +2,7 @@ import { Rubik } from 'next/font/google';
 import './globals.css';
 import Header from './components/Header';
 import { ScoreProvider } from './scores/ScoreContext';
+import { Suspense } from 'react';
 
 const rubik = Rubik({ subsets: ['latin'] });
 // const inter = Inter({ subsets: ['latin'] });
@@ -16,7 +17,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ScoreProvider>
         <body className={rubik.className}>
-          <Header />
+          <Suspense>
+            <Header />
+          </Suspense>
           {children}
         </body>
       </ScoreProvider>

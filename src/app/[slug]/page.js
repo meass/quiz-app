@@ -1,6 +1,7 @@
 import ListQuestion from '@/app/components/ListQuestion';
 import Score from '@/app/components/Score';
 import Level from '../components/Level';
+import { Suspense } from 'react';
 
 async function getQuestionApi({ id, level }) {
   const res = await fetch(
@@ -41,7 +42,9 @@ export default async function QuestionPage(params) {
               <i>Pick a subject to get started.</i>
             </p>
           </div>
-          <Level />
+          <Suspense>
+            <Level />
+          </Suspense>
         </>
       )}
       {data && questionList.length > 0 && (
