@@ -12,7 +12,6 @@ export default function Header() {
 
   useEffect(() => {
     const categories = JSON.parse(localStorage.getItem('categories'));
-    console.log({ categories });
     categories.map((item) => {
       if (item.id == id) {
         saveCategory(item);
