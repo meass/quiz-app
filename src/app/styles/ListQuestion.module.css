@@ -1,0 +1,33 @@
+.container {
+  @apply text-white py-8 lg:flex w-full;
+}
+.sub-container {
+  @apply max-w-[564px] w-full;
+}
+.sub-container:nth-child(1) span {
+  @apply text-sm text-angela-bay lg:text-[28px];
+}
+.sub-container:nth-child(1) h1 {
+  @apply text-xl leading-6 py-2 lg:pt-8 lg:text-4xl lg:max-w-[452px];
+}
+.sub-container:nth-child(2) ol {
+  @apply flex flex-col gap-4 py-6 lg:pt-0;
+}
+.sub-container:nth-child(2) ol li {
+  @apply cursor-pointer bg-blue-bottle rounded-xl p-2 lg:p-5 flex items-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300;
+}
+.sub-container:nth-child(2) ol li span:nth-child(1) {
+  @apply text-dark-room bg-white-solid w-10 h-10 rounded-md text-center leading-10 text-lg lg:text-[28px];
+}
+.sub-container:nth-child(2) ol li span:nth-child(2) {
+  @apply pl-4 text-sm lg:text-[28px] lg:leading-[1.85rem] max-w-[270px] lg:max-w-[450px];
+}
+.sub-container:nth-child(2) .submit-btn {
+  @apply bg-cool-purple hover:bg-cool-purple/50 w-full rounded-lg py-2 lg:py-5 lg:text-[28px] text-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300;
+}
+.sub-container:nth-child(2) .error-text {
+  @apply flex items-center justify-center py-4 lg:py-8;
+}
+.sub-container:nth-child(2) .error-text span {
+  @apply text-lg lg:text-[28px];
+}

@@ -1,0 +1,12 @@
+.container {
+  @apply text-white px-3 py-8 max-w-[350px] md:max-w-[640px] mx-auto lg:max-w-[1160px] lg:flex lg:items-start lg:justify-center;
+}
+.sub-container {
+  @apply lg:w-1/2;
+}
+.sub-container h1 {
+  @apply text-4xl lg:text-6xl pb-4 lg:pb-12 lg:leading-[4.5rem];
+}
+.sub-container p {
+  @apply text-sm lg:text-[28px] font-extralight text-angela-bay;
+}

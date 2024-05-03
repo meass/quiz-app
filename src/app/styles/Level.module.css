@@ -1,0 +1,18 @@
+.container {
+  @apply flex flex-col gap-4 lg:gap-6 py-10 lg:py-0 text-white lg:w-1/2;
+}
+.container li {
+  @apply cursor-pointer bg-blue-bottle rounded-xl p-3 lg:p-5 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300;
+}
+.container li button {
+  @apply flex items-center gap-4;
+}
+.icon-container {
+  @apply rounded-lg w-10 h-10 lg:w-14 lg:h-14 flex justify-center;
+}
+.icon-container img {
+  @apply max-w-7 lg:max-w-10;
+}
+.container span {
+  @apply text-lg lg:text-[28px] capitalize;
+}

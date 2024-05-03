@@ -1,0 +1,30 @@
+.container {
+  @apply text-white py-6 lg:flex lg:justify-between w-full;
+}
+.container h1 {
+  @apply text-4xl lg:text-[64px] lg:leading-[4.5rem] font-light max-w-[564px] w-full;
+}
+.sub-container {
+  @apply max-w-[564px] w-full;
+}
+.sub-container .section {
+  @apply bg-blue-bottle flex flex-col items-center py-6 lg:py-12 rounded-xl lg:mt-0 my-8;
+}
+.icon-container {
+  @apply rounded-lg w-10 h-10 lg:w-14 lg:h-14 flex justify-center;
+}
+.icon-container img {
+  @apply max-w-7 lg:max-w-10;
+}
+.section h2 {
+  @apply text-lg lg:text-[28px];
+}
+.sub-container h3 {
+  @apply text-[88px] font-bold;
+}
+.sub-container p {
+  @apply text-angela-bay lg:text-[28px];
+}
+.container button {
+  @apply bg-cool-purple w-full rounded-lg py-2 text-lg lg:text-[28px] lg:p-5;
+}

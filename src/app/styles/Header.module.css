@@ -1,0 +1,18 @@
+.container {
+  @apply flex py-4 w-full text-white justify-between items-center max-w-[350px] md:max-w-[640px] lg:max-w-[1160px] mx-auto px-3;
+}
+.sub-container {
+  @apply flex items-center gap-3;
+}
+.sub-container div {
+  @apply rounded-lg w-10 h-10 lg:w-14 lg:h-14 flex justify-center;
+}
+.sub-container div img {
+  @apply max-w-7 lg:max-w-10;
+}
+.sub-container h2 {
+  @apply text-lg lg:text-[28px];
+}
+.container h1 {
+  @apply ml-auto lg:text-[28px];
+}

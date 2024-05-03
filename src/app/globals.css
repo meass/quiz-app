@@ -16,7 +16,7 @@
   }
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +24,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+body {
+  @apply bg-waterhen-back bg-[url('/images/pattern-background-mobile-dark.svg')] 
+  bg-no-repeat bg-cover lg:h-screen lg:flex lg:justify-center lg:flex-col w-full;
 }
 
 @layer utilities {
