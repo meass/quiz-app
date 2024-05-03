@@ -3,6 +3,7 @@ import { useContext, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { ScoreContext } from '../scores/ScoreContext';
 import style from '@/app/styles/Header.module.css';
+import { Suspense } from 'react';
 
 export default function Header() {
   const searchParams = useSearchParams();
@@ -21,16 +22,18 @@ export default function Header() {
   }, [id]);
 
   return (
-    <header className={style.container}>
-      {category && (
-        <div className={style['sub-container']}>
-          <div style={{ backgroundColor: `${category.bgColor}` }}>
-            <img src={category.icon} alt={category.icon} />
+    <Suspense>
+      <header className={style.container}>
+        {category && (
+          <div className={style['sub-container']}>
+            <div style={{ backgroundColor: `${category.bgColor}` }}>
+              <img src={category.icon} alt={category.icon} />
+            </div>
+            <h2>{category.name}</h2>
           </div>
-          <h2>{category.name}</h2>
-        </div>
-      )}
-      <h1>Quizz App</h1>
-    </header>
+        )}
+        <h1>Quizz App</h1>
+      </header>
+    </Suspense>
   );
 }

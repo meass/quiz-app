@@ -1,6 +1,7 @@
 'use client';
 import { useRouter, useSearchParams, usePathname } from 'next/navigation';
 import style from '@/app/styles/Level.module.css';
+import { Suspense } from 'react';
 
 const LEVELS = [
   {
@@ -30,25 +31,27 @@ export default function Level() {
   const pathname = usePathname();
 
   return (
-    <ul className={style.container}>
-      {LEVELS.map((item) => (
-        <li
-          key={item.id}
-          onClick={() =>
-            router.push(`${pathname}?id=${id}&level=${item.value}`)
-          }
-        >
-          <button>
-            <div
-              style={{ backgroundColor: `${item.bgColor}` }}
-              className={style['icon-container']}
-            >
-              <img src={item.icon} alt="icon-html" />
-            </div>
-            <span>{item.value}</span>
-          </button>
-        </li>
-      ))}
-    </ul>
+    <Suspense>
+      <ul className={style.container}>
+        {LEVELS.map((item) => (
+          <li
+            key={item.id}
+            onClick={() =>
+              router.push(`${pathname}?id=${id}&level=${item.value}`)
+            }
+          >
+            <button>
+              <div
+                style={{ backgroundColor: `${item.bgColor}` }}
+                className={style['icon-container']}
+              >
+                <img src={item.icon} alt="icon-html" />
+              </div>
+              <span>{item.value}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </Suspense>
   );
 }
