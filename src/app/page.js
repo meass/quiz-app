@@ -29,7 +29,9 @@ const categoryIdsToRetrieve = [
 ];
 
 async function getData() {
-  const res = await fetch(`${process.env.BASE_URL}/api_category.php`);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api_category.php`
+  );
   return res.json();
 }
 

@@ -5,7 +5,7 @@ import { Suspense } from 'react';
 
 async function getQuestionApi({ id, level }) {
   const res = await fetch(
-    `${process.env.BASE_URL}/api.php?amount=10&category=${id}&difficulty=${level}&type=multiple`
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api.php?amount=10&category=${id}&difficulty=${level}&type=multiple`
   );
   return res.json();
 }
