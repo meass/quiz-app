@@ -14,7 +14,7 @@
   @apply flex flex-col gap-4 py-6 lg:pt-0;
 }
 .sub-container:nth-child(2) ol li {
-  @apply cursor-pointer bg-blue-bottle rounded-xl p-2 lg:p-5 flex items-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300;
+  @apply cursor-pointer bg-blue-bottle rounded-xl p-2 lg:p-5 flex items-center transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-100 duration-300;
 }
 .sub-container:nth-child(2) ol li span:nth-child(1) {
   @apply text-dark-room bg-white-solid w-10 h-10 rounded-md text-center leading-10 text-lg lg:text-[28px];
